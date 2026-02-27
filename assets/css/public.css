@@ -1,0 +1,81 @@
+/* ===== GLOBAL ===== */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* ===== HERO SECTION ===== */
+.page-header {
+    margin-bottom: 40px;
+}
+
+.page-header h2 {
+    font-weight: 600;
+}
+
+/* ===== CARD ===== */
+.article-card {
+    border: none;
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+    border-radius: 8px;
+}
+
+/* ===== DETAIL PAGE ===== */
+.article-detail-card {
+    border: none;
+    border-radius: 12px;
+}
+
+.article-detail-card img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.article-content {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    font-size: 14px;
+}

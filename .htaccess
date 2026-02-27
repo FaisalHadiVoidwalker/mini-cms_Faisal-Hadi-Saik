@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect semua request ke index.php kecuali file/folder asli
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
