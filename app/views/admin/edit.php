@@ -1,4 +1,11 @@
 <?php $title = "Edit Artikel"; ?>
+<?php if (isset($_SESSION['error'])): ?>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <?= $_SESSION['error']; ?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+  <?php unset($_SESSION['error']); ?>
+<?php endif; ?>
 <?php require __DIR__ . '/../../../partials/admin-header.php'; ?>
 
 <div class="card shadow-sm border-0">
