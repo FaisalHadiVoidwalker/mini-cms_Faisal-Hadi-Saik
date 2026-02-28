@@ -1,4 +1,5 @@
 <?php $title = "Edit Artikel"; ?>
+
 <?php if (isset($_SESSION['error'])): ?>
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <?= $_SESSION['error']; ?>
@@ -6,6 +7,7 @@
   </div>
   <?php unset($_SESSION['error']); ?>
 <?php endif; ?>
+
 <?php require __DIR__ . '/../../../partials/admin-header.php'; ?>
 
 <div class="card shadow-sm border-0">
@@ -14,6 +16,10 @@
     <form method="POST"
       action="admin.php?page=update&id=<?= $artikel['id'] ?>"
       enctype="multipart/form-data">
+
+      <div class="mb-3">
+        <input type="hidden" name="id" value="<?= $artikel['id'] ?>">
+      </div>
 
       <div class="mb-3">
         <label class="form-label">Judul</label>

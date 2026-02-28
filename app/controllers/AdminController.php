@@ -150,23 +150,12 @@ class AdminController
       exit;
     }
 
-    $id    = $_POST['id'] ?? null;
+    $id    = $_POST['id'] ?? '';
     $judul = trim($_POST['judul'] ?? '');
     $isi   = trim($_POST['isi'] ?? '');
 
-    if (!$id || empty($judul) || empty($isi)) {
-      $_SESSION['error'] = "Data tidak lengkap.";
-      header("Location: admin.php?page=edit&id=" . $id);
-      exit;
-    }
-
     // Ambil data lama
     $artikelLama = $this->artikelModel->getById($id);
-    if (!$artikelLama) {
-      $_SESSION['error'] = "Artikel tidak ditemukan.";
-      header("Location: admin.php");
-      exit;
-    }
 
     $gambarName = $artikelLama['gambar']; // default pakai gambar lama
 
